@@ -1,0 +1,460 @@
+day 3
+-----
+
+program 1:
+
+using System;
+namespace prg1
+{
+       static void Main(string[] args)
+         {
+            int number1, number2, temp;
+            Console.Write("\nInput the First Number : ");
+            number1 = int.Parse(Console.ReadLine());
+            Console.Write("\nInput the Second Number : ");
+            number2 = int.Parse(Console.ReadLine());
+            temp = number1;
+            number1 = number2;
+            number2 = temp;
+            Console.Write("\nAfter Swapping : ");
+            Console.Write("\nFirst Number : "+number1);
+            Console.Write("\nSecond Number : "+number2);
+            Console.Read();
+        }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 2:
+
+
+using System;
+namespace prg2
+{
+  static void Main()
+  {
+    int num1, num2, num3;
+     
+    Console.Write("Input the first number to multiply: ");
+    num1 = Convert.ToInt32(Console.ReadLine());
+     
+    Console.Write("Input the second number to multiply: ");
+    num2 = Convert.ToInt32(Console.ReadLine());
+     
+    Console.Write("Input the third number to multiply: ");
+    num3 = Convert.ToInt32(Console.ReadLine());
+     
+    int result = num1 * num2 * num3;
+    Console.WriteLine("Output: {0} x {1} x {2} = {3}",  num1, num2, num3, result);
+                       
+  }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 3:
+
+
+using System;
+namespace prg3
+{
+    static void Main()
+    {
+        Console.Write("Enter a number: ");
+        int num1= Convert.ToInt32(Console.ReadLine());
+ 
+        Console.Write("Enter another number: ");
+        int num2= Convert.ToInt32(Console.ReadLine());
+   
+        Console.WriteLine("{0} + {1} = {2}", num1, num2, num1+num2);
+        Console.WriteLine("{0} - {1} = {2}", num1, num2, num1-num2);
+        Console.WriteLine("{0} x {1} = {2}", num1, num2, num1*num2);
+        Console.WriteLine("{0} / {1} = {2}", num1, num2, num1/num2);
+        Console.WriteLine("{0} mod {1} = {2}", num1, num2, num1%num2);
+   }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 4:
+
+using System;
+
+namespace prg4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double number1, number2, number3, number4;
+
+            Console.Write("Enter the First number:");
+            number1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter the Second number:");
+            number2 = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter the Third number:");
+            number3 = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter the Fourth number:");
+            number4 = Convert.ToDouble(Console.ReadLine());
+
+            double result = (number1 + number2 + number3 + number4) / 4;
+            Console.WriteLine("The Average of {0}, {1}, {2}, {3} is: {4}", number1, number2, number3, number4, result);
+
+
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 5:
+
+
+using System;
+
+namespace prg5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1, num2, num3;
+
+            Console.Write("enter first num -");
+            num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("enter second num -");
+            num2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("enter third num -");
+            num3 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Result of specified num {0},{1},{2},(x+y).z is {3} and x.y + y.z is {4}]\n\n", num1, num2, num3, ((num1 + num2) * num3), (num1 * num2 + num2 * num3));
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 6:
+
+using System;
+
+namespace prg6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int age;
+            Console.Write("Enter your age");
+            age = Convert.ToInt32(Console.ReadLine());
+            Console.Write("you look older than {0}", age);
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 7:
+
+using System;
+
+namespace prg7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num;
+            Console.WriteLine("Enter a digit:");
+            num = Convert.ToInt32(Console.ReadLine());
+
+            //part A
+
+            Console.Write(num);
+            Console.Write(" ");
+            Console.Write(num);
+            Console.Write(" ");
+            Console.Write(num);
+            Console.Write(" ");
+            Console.Write(num);
+            Console.WriteLine();
+
+
+            //part B
+
+            Console.Write(num);
+            Console.Write(num);
+            Console.Write(num);
+            Console.WriteLine(num);
+            Console.WriteLine();
+
+
+            //part C
+
+            Console.WriteLine("{0} {0} {0} {0}", num);
+
+            //part D
+
+            Console.WriteLine("{0}{0}{0}{0}", num);
+
+            //part E
+            Console.WriteLine("{0} {0} {0} {0}", num);
+
+            //part F
+
+            Console.WriteLine("{0}{0}{0}{0}", num);
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 8 :
+
+using System;
+
+namespace prg8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x;
+
+            Console.Write("Enter a number:");
+            x = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("{0}{0}{0]{0}", x);
+            Console.WriteLine("{0} {0]", x);
+            Console.WriteLine("{0} {0}", x);
+            Console.WriteLine("{0} {0}", x);
+            Console.WriteLine("{0}{0]{0}", x);
+
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 9:
+
+using System;
+
+namespace prg9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter the amount of Celsius: ");
+            int celsius = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("smith = {0}", celsius + 273);
+            Console.WriteLine("warner = {0}", celsius * 18 / 10 + 32);
+        
+        }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 10:
+
+using System;
+
+namespace prg10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("\nInput first integer:");
+
+            int x = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Input second integer:");
+
+            int y = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Expected Output:");
+
+            Console.WriteLine((x < 0 && y > 0) || (x > 0 && y < 0));
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+program 11:
+
+using System;
+
+namespace ex11
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("\nInput first integer:");  
+           int x = Convert.ToInt32(Console.ReadLine());
+           Console.WriteLine("Input second integer:");  
+           int y = Convert.ToInt32(Console.ReadLine());
+           Console.WriteLine("Check if one is negative and one is positive:");
+           Console.WriteLine((x < 0 && y > 0) || (x > 0 && y < 0));
+
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+program 12:
+
+using System;
+namespace prg12
+ {
+    
+    // Main Method
+   static void Main(string[] args)
+    {
+        string s1 = "GeeksforGeeks";
+      
+        // or declare String s2.Empty;
+        string s2 = ""; 
+  
+        string s3 = null;
+  
+        // for String value Geeks, return true
+        bool b1 = string.IsNullOrEmpty(s1);
+  
+        // For String value Empty or "", return true
+        bool b2 = string.IsNullOrEmpty(s2);
+  
+        // For String value null, return true
+        bool b3 = string.IsNullOrEmpty(s3);
+  
+        Console.WriteLine(b1);
+        Console.WriteLine(b2);
+        Console.WriteLine(b3);
+    }
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+program13:
+
+using System;
+
+namespace prg13
+{
+    public static double MeterToKilometer(double meter)
+    {
+        double KM = 0;
+
+        KM = meter / 1000;
+
+        return KM;
+    }
+
+    public static double KilometerToMeter(double km)
+    {
+        double METER = 0;
+
+        METER = km * 1000;
+ 
+        return METER;
+    }
+
+    static void Main()
+    {
+        double meter = 0;
+        double km    = 0;
+
+        Console.Write("Enter the value of meter : ");
+        meter = double.Parse(Console.ReadLine());
+
+        km = MeterToKilometer(meter);
+        Console.WriteLine("Kilometer : "+km+"km");
+
+        Console.Write("Enter the value of kilometer : ");
+        km = double.Parse(Console.ReadLine());
+
+        meter = KilometerToMeter(km);
+        Console.WriteLine("Meter : " + meter + "m");
+
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+program 14:
+
+using System.Text;
+
+namespace prg14
+ {
+
+
+      static void Main(string[] args) {
+
+         double fahrenheit;
+
+         double celsius = 36;
+         Console.WriteLine("Celsius: " + celsius);
+
+         fahrenheit = (celsius * 9) / 5 + 32;
+         Console.WriteLine("Fahrenheit: " + fahrenheit);
+
+         Console.ReadLine();
+      
+   }
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 15:
+
+using System;
+
+namespace prg15
+{
+    static void Main(string[] args)
+    {
+            
+        double usd    = 0;
+        double inr    = 0;
+        double value  = 0;
+            
+        Console.Write("Enter amount in USD: ");
+        usd = double.Parse(Console.ReadLine());
+            
+        Console.Write("Enter the USD value :");
+        value = double.Parse(Console.ReadLine());
+           
+        inr = usd * value;
+        Console.WriteLine("USD "+usd+"-> INR "+inr);
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 16:
+
+using system;
+namespace prg16
+{
+  static void Main(string[] args)
+        {
+            Console.WriteLine("enter first name");
+            string fname=Console.ReadLine();
+            Console.WriteLine("enter last name");
+            string lname = Console.ReadLine();
+            Console.WriteLine("{0}=userid",fname);
+            Console.WriteLine("{0}=password", lname);
+            Console.WriteLine("welcome !!!");
+               Console.ReadLine();
+        }
