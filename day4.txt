@@ -1,0 +1,567 @@
+day4:
+
+progarm1
+
+using System;
+
+namespace prg1
+{
+    class Test
+    {
+        
+        static void Main(string[] args)
+        {
+            int a;
+            int b;
+            int min;
+            int max;
+
+            
+            Console.Write("Enter first number : ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter second number: ");
+            b = Convert.ToInt32(Console.ReadLine());
+
+            
+            if (a > b)
+                max = a;
+            else
+                max = b;
+
+            
+            if (a < b)
+                min = a;
+            else
+                min = b;
+
+            
+            Console.WriteLine("Using if-else...");
+            Console.WriteLine("Minimum number = {0}", min);
+            Console.WriteLine("Maximum number = {0}", max);
+
+            
+            max = (a > b) ? a : b;
+
+           
+            min = (a < b) ? a : b;
+
+           
+            Console.WriteLine("Using Ternary operator...");
+            Console.WriteLine("Minimum number = {0}", min);
+            Console.WriteLine("Maximum number = {0}", max);
+
+            
+            Console.ReadLine();
+        }
+    }
+}
+----------------------------------------------------------------------------------------------------------------------------------------
+progarm 2:
+
+using System;
+
+namespace prg2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1, num2, num3;
+
+            Console.Write("\n\n");
+            Console.Write("Find the largest of three numbers:\n");
+            Console.Write("---------");
+            Console.Write("\n\n");
+
+            Console.Write("Input the 1st number :");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input the 2nd number :");
+            num2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input the 3rd number :");
+            num3 = Convert.ToInt32(Console.ReadLine());
+
+            if (num1 > num2)
+            {
+                if (num1 > num3)
+                {
+                    Console.Write("The 1st Number is the greatest amoung three.\n\n");
+
+                }
+                else
+                {
+                    Console.Write("The 3rd Number is the greatest amoung three.\n\n");
+                }
+            }
+            else if (num2 > num3)
+                Console.Write(" The 2nd Number is the greatest amoung three \n\n");
+            else
+                Console.Write("The 3rd Number is the greatest amoung three \n\n");
+        }   
+    }
+}
+
+
+---------------------------------------------------------------------------------------------------
+
+program 3:
+
+
+using System;
+
+namespace prg3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char c1, c2;
+
+            Console.WriteLine("Enter the first character : ");
+            c1 = Console.ReadLine()[0];
+
+            Console.WriteLine("Enter the second character : ");
+            c2 = Console.ReadLine()[0];
+
+            if (c1 == c2)
+                Console.WriteLine("Both characters are equal");
+            else
+                Console.WriteLine("Characters are not equal");
+        }
+    }
+}
+    
+
+
+------------------------------------------------------------------------------------------------------
+program 4:
+
+using System;
+
+namespace prg4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str1;
+            string str2;
+
+            Console.Write("Enter the string:");
+            str1 = Console.ReadLine();
+            Console.Write("Enter another string:");
+            str2 = Console.ReadLine();
+
+            if (str1 == str2)
+                Console.WriteLine("\"{0}\" and \"{1}\") are equal", str1, str2);
+            else
+                Console.WriteLine("\"{0}\" and \"{1}\" are not equal", str1, str2);
+
+            if ((str1 == str2) == true)
+                Console.WriteLine("\"{0}\" and \"{1}\") are equal", str1, str2);
+
+            else
+                Console.WriteLine("\"{0}\" and \"{1}\" are not equal", str1, str2);
+
+            Console.WriteLine("By ignoring case.... ");
+            if(str1.ToUpper()==str2.ToUpper())
+                Console.WriteLine("\"{0}\" and \"{1}\") are equal", str1, str2);
+            else
+                Console.WriteLine("\"{0}\" and \"{1}\" are not equal", str1, str2);
+
+            Console.ReadLine();
+        }       
+    }
+}
+-----------------------------------------------------------------------------------------------
+
+program5
+
+
+using System;
+
+namespace prg5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int count = 0;
+            Console.WriteLine("Enter Total Number of Integers\n");
+            count = int.Parse(Console.ReadLine());
+
+            int[] numbers = new int[count];
+
+            Console.WriteLine("Enter the numbers"); // Input 44, 55, 111, 2 Output = "111"
+            for (int temp = 0; temp < count; temp++)
+            {
+                numbers[temp] = int.Parse(Console.ReadLine());
+            }
+
+            int largest = numbers[0];
+            for (int big = 1; big < numbers.Length; big++)
+            {
+                if (largest < numbers[big])
+                {
+                    largest = numbers[big];
+                }
+            }
+            Console.WriteLine(largest);
+            Console.ReadKey();
+        }
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------
+
+program6
+
+
+
+
+using System;
+
+namespace prg6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int chk_year;
+            Console.Write("\n\n");
+            Console.Write("Check whether a given year is leap year or not:\n");
+            Console.Write("------------");
+            Console.Write("\n\n");
+            Console.Write("Input an year : ");
+            chk_year = Convert.ToInt32(Console.ReadLine());
+
+            if ((chk_year % 400) == 0)
+                Console.WriteLine("{0} is a leap year.\n", chk_year);
+            else if ((chk_year % 100) == 0)
+                Console.WriteLine("{0} is not a leap year.\n", chk_year);
+            else if ((chk_year % 4) == 0)
+                Console.WriteLine("{0} is a leap year.\n", chk_year);
+            else
+                Console.WriteLine("{0} is not a leap year.\n", chk_year);
+        }
+    }
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------
+program7
+
+using System;
+
+namespace prg7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double phy, che, sc, total;
+            double per;
+            string  div;
+
+            Console.Write("\n\n");
+            Console.Write("Calculate the total, percentage and division to take marks of three subjects:\n");
+            Console.Write("--------------");
+            Console.Write("\n\n");
+
+            Console.Write("Input  the marks of Physics : ");
+            phy = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input  the marks of  Chemistry : ");
+            che = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Input  the marks of Science : ");
+            sc = Convert.ToInt32(Console.ReadLine());
+
+            total = phy + che + sc;
+            per = total / 3.0;
+            if (per >= 60)
+                div = "First";
+            else
+            if (per < 35 && per >= 40)
+                div = "Second";
+            else
+                if (per < 45 && per >= 60)
+                div = "Pass";
+            else
+                div = "Fail";
+
+            
+            Console.Write("Marks in Physics : {0}\nMarks in Chemistry : {1}\nMarks in Science : {2}\n", phy, che, sc);
+            Console.Write("Total Marks = {0}\nPercentage = {1}\nDivision = {2}\n", total, per, div);
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+program8
+
+using System;
+
+namespace prg8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, j;
+            int MAX = 5;
+
+            for (i = 0; i < MAX; i++)
+            {
+                for (j = 0; j <= i; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.Write("\n");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+program9
+
+using System;
+
+namespace prg9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int i, n, sum = 0;
+            Console.Write("\n\n");
+            Console.Write("Display the sum of n odd natural number:\n");
+            Console.Write("------------");
+            Console.Write("\n\n");
+
+            Console.Write("Input number of terms : ");
+            n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nThe odd numbers are :");
+            for (i = 1; i <= n; i++)
+            {
+                Console.Write("{0} ", 2 * i - 1);
+                sum += 2 * i - 1;
+            }
+            Console.Write("\nThe Sum of odd Natural Number upto {0} terms : {1} \n", n, sum);
+
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------
+
+program10
+
+
+using System;
+
+namespace prg10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+             int num,r,sum=0,t;
+	
+	Console.Write("\n\n");
+    Console.Write("Reverse Order:\n");
+    Console.Write("---\\//----  ");
+    Console.Write("\n\n");  	
+	
+
+    Console.Write("Input a number: ");
+    num = Convert.ToInt32(Console.ReadLine()); 	
+
+    for(t=num;t!=0;t=t/10)
+	{
+         r=t % 10;
+         sum=sum*10+r;
+    }
+    Console.Write("Reverse Order is : {0} \n",sum);
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------
+program11
+
+
+using System;
+namespace prg 11
+
+{
+  public static void Main()
+        {
+            int i, sum = 0;
+
+            Console.Write("\n\n");
+            Console.Write("sum of all integer number between 100 and 200 \n");
+            Console.Write("----------------------");
+            Console.Write("\n\n");
+
+            Console.Write("Numbers between 100 and 200: \n");
+            for (i = 100; i <= 200; i++)
+            {
+               
+                sum= sum + i;
+            }
+            Console.Write("\n\nThe sum : {0} \n", sum);
+        }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------
+program12
+
+
+using System;
+
+namespace prg12
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, sum = 0;
+
+            Console.Write("\n\n");
+            Console.Write("100 and 200 divisible by 9:\n");
+            Console.Write("-_______---@@@@@@@--_______-");
+            Console.Write("\n\n");
+
+            Console.Write("divisible by 9 : \n");
+            for (i = 101; i < 200; i++)
+            {
+                if (i % 9 == 0)
+                {
+                    Console.Write("{0}  ", i);
+                    sum += i;
+                }
+            }
+            Console.Write("\n\nThe sum : {0} \n", sum);
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 13:
+
+using System;
+namespace prg13
+{
+    public static void Main()
+    {
+        int num1, rem1;
+        Console.Write("\n\n");
+        Console.Write("Check whether a number is even or odd :\n");
+        Console.Write("------------------------");
+        Console.Write("\n\n");
+        Console.Write("Input an integer : ");
+        num1 = Convert.ToInt32(Console.ReadLine());
+        rem1 = num1 % 2;
+        if (rem1 == 0)
+            Console.WriteLine("{0} is an even integer.\n", num1);
+        else
+            Console.WriteLine("{0} is an odd integer.\n", num1);
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+program14
+
+using System;
+
+namespace prg14
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            location loc = location.hyderabad;
+            switch (loc)
+            {
+                case location.chennai:
+                   Console.WriteLine("Location: Chennai");
+                   break;
+                case location.guntur:
+                   Console.WriteLine("Location: Guntur");
+                   break;
+                case location.hyderabad:
+                   Console.WriteLine("Location: Hyderabad");
+                   break;
+                default:
+                   Console.WriteLine("Not Known");
+                   break;
+            }
+            Console.WriteLine("Press Enter Key to Exit..");
+            Console.ReadLine();
+        }
+        public enum location
+        {
+            hyderabad,
+            chennai,
+            guntur
+        }
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+program15
+
+
+using System;
+namespace prg15
+{
+    public class updown
+    {
+        static void Main(string[] args)
+        {
+          
+                int i = 0;
+                int j = 25;
+                for (i = 0; i < j; i++)
+                {
+
+                    j = j - 1;
+
+                }
+
+                Console.WriteLine("updown" + "  " + "i=" + i.ToString() + ">" + "j=" + j.ToString());
+
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 16
+
+using System;
+namespace prg16
+{
+ static void main(string[] args)
+       {
+      string c;
+            int s = 100;
+            Console.WriteLine("Enter 'HIT' or 'MISS':");
+            for (int q = 0; q < 4; q++)
+            {
+                c = Console.ReadLine();
+                if (c == "HIT" || c == "hit")
+                {
+                    s += 10;  
+                }
+                else if (c == "MISS" || c == "miss")
+                {
+                    s -= 20;   
+                }
+            }
+            Console.WriteLine("Score: " + s);
+      }
+}
