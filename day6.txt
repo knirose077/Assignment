@@ -1,0 +1,484 @@
+Day 6 :
+======
+
+Program 1:
+---------
+
+using System;
+
+namespace prg1
+{
+    class add
+        {
+            static void Main()
+            {
+                int x, y;
+                int sum;
+                Console.Write("Enter First number: ");
+                x = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter Second number: ");
+                y = Convert.ToInt32(Console.ReadLine());
+                addition(x, y, out sum);
+                Console.WriteLine("Sum is: " + sum);
+                Console.ReadLine();
+            }
+            public static void addition(int x, int y, out int sum)
+            {
+            sum = x + y;
+            }
+     }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Program 2:
+--------
+
+using System;
+
+namespace prg2
+{
+    class updown
+    {
+        static void Main()
+        {
+            int a, b;
+            int sum;
+
+            Console.Write("Enter First Number:");
+            a = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter Second Number:");
+            b = Convert.ToInt32(Console.ReadLine());
+
+            sum = add(a,b);
+
+            Console.WriteLine("Sum is:" + sum);
+            Console.ReadLine();
+        }
+        static int add(int a,int b)
+        {
+            return a + b;
+        }
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Program 3:
+---------
+
+using System;
+using System.Collections.Generic;
+
+namespace prg3
+{
+    struct emp_details
+    {
+        public int empno;
+        public string empname;
+        public int salary;
+        public int deptno;
+    };
+
+    public class employee
+    {
+        public static void Main(string[] args)
+        {
+            emp_details employee1;
+            emp_details employee2;
+
+            employee1.empno = 01;
+            employee1.empname = "mark";
+            employee1.salary = 19000;
+            employee1.deptno =5;
+
+            employee2.empno = 02;
+            employee2.empname = "thomes";
+            employee2.salary = 16000;
+            employee2.deptno = 6;
+
+            Console.Write("Employee Details ");
+            Console.WriteLine("---->");
+            Console.WriteLine(employee1.empno);
+            Console.WriteLine(employee1.empname);
+            Console.WriteLine(employee1.salary);
+            Console.WriteLine(employee1.deptno);
+
+            Console.WriteLine("_______________");
+
+            Console.WriteLine(employee2.empno);
+            Console.WriteLine(employee2.empname);
+            Console.WriteLine(employee2.salary);
+            Console.WriteLine(employee2.deptno);
+
+            Console.ReadKey();
+        }
+    }
+}
+
+_____________________________________________________________________________________________________________________________________________________
+
+
+Program 4:
+_________
+
+
+using System;
+
+namespace prg4
+{
+    struct Employee
+        {
+            public int no;
+            public string name;
+            public int salary;
+            public int deptno;
+
+            public void getno(int no)
+            {
+                Console.WriteLine("Employee Id: " + no);
+            }
+            public void getname(string name)
+            {
+                Console.WriteLine("Employee name: " + name);
+            }
+            public void getsalary(int salary)
+            {
+                Console.WriteLine("Employee salary: " + salary);
+            }
+            public void getdeptno(int deptno)
+            {
+                Console.WriteLine(" Employee deptno: " + deptno);
+            }
+
+        }
+
+        class employee
+        {
+            static void Main(string[] args)
+            {
+
+
+                Employee emp;
+
+
+                emp.no =       1;
+                string name = null;
+                emp.name =   name;
+                emp.salary = 19000;
+                emp.deptno =  12;
+
+
+                emp.getno(emp.no);
+                emp.getname(emp.name);
+                emp.getsalary(emp.salary);
+                emp.getdeptno(emp.deptno);
+
+
+                Console.ReadLine();
+            }
+        }
+}
+
+_____________________________________________________________________________________________________________________________________________
+
+Program 5:
+________
+
+using System;
+
+namespace day4._5
+{   
+        public struct Emp_details
+        {
+            public int No;
+            public string Name;
+            public int Sal;
+            public int Deptno;
+
+            public void SetEmployee(int no, string name, int sal, int deptno)
+            {
+
+                No = no;
+                Name = name;
+                Sal = sal;
+                Deptno = deptno;
+
+            }
+            public void DisplayEmployee()
+
+            {
+                Console.WriteLine("Employee_details:");
+            Console.WriteLine("________________");
+                Console.WriteLine("\tEmp_No    : " + No);
+                Console.WriteLine("\tEmp_Name   : " + Name);
+                Console.WriteLine("\tEmp_Salary   : " + Sal);
+                Console.WriteLine("\tEmp_Deptno   : " + Deptno);
+                Console.WriteLine("\n");
+
+            }
+        }
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                Emp_details[] emp = { new Emp_details(),
+
+                       new Emp_details(),
+                       new Emp_details(),
+                       new Emp_details(),
+        };
+
+                emp[0].SetEmployee(1, "dhili", 15000, 10);
+                emp[1].SetEmployee(2, "theja", 17000, 11);
+                emp[2].SetEmployee(3, "surya", 18000, 12);
+                emp[3].SetEmployee(4, "ganesh", 19000, 13);
+
+
+
+                emp[0].DisplayEmployee();
+                emp[1].DisplayEmployee();
+                emp[2].DisplayEmployee();
+                emp[3].DisplayEmployee();
+            }
+        }
+    }
+
+________________________________________________________________________________________________________________________________________________________________
+
+Program 6:
+_________
+
+
+using System;
+
+namespace prg6
+{
+    enum deptnames
+    {
+        Purchase = 8,
+        Sales = 9,
+        Training = 5,
+        Accounts = 4
+    }
+     class prg6
+    {
+
+       static void Main(string[] args)
+        {
+
+            Console.WriteLine(deptnames.Training);
+
+            int deptno = (int)deptnames.Training;
+
+            Console.WriteLine("\nDept No: " + deptno);
+
+            Console.Read();
+        }
+
+    }
+}
+
+______________________________________________________________________________________________________________________________
+
+Program7:
+_________
+
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace prg7
+{
+    internal class program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+
+                Console.WriteLine("input first number");
+                int i = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("input second number");
+                int j = Convert.ToInt32(Console.ReadLine());
+
+                int k = i / j;
+                Console.WriteLine(k);
+
+            }
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine("this is a divide by zero exception");
+                Console.WriteLine(ex.Message);
+
+            }
+            catch (StackOverflowException ex)
+            {
+                Console.WriteLine(ex.Message);
+
+            }
+            finally
+            {
+                Console.WriteLine("anyway printed");
+
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+_______________________________________________________________________________________________________________________
+
+Program 8:
+___________
+
+using System;
+
+namespace prg8
+{
+    class Program
+    {
+       public static void Main(string[] args)
+        {
+            Console.WriteLine("input first number");
+            int i = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("input second number");
+            int j = Convert.ToInt32(Console.ReadLine());
+            Divide(i, j);
+
+            Console.ReadLine();
+        }
+        static void Divide(int x, int y)
+        {
+            try
+            {
+                int r;
+                r = x / y;
+                Console.WriteLine(r);
+            }
+            catch (DivideByZeroException  ex)
+            {
+                Console.WriteLine(ex.StackTrace);
+
+            }
+            finally
+            {
+                Console.WriteLine("anyway message got");
+            }
+
+        }
+    }
+}
+
+
+__________________________________________________________________________________________________________________________
+
+Program 9:
+________
+
+using System;
+using System.Xml.Linq;
+
+namespace prg9
+{
+    class Problem
+    {
+        public static void Main(string[] args)
+        {
+
+            Employees e1 = new Employees();
+            Console.WriteLine("Enter Employee number:");
+            e1.empno = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Employee Name:");
+            e1.ename = Console.ReadLine();
+            Console.WriteLine("Enter Employee Salary:");
+            int sal = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Employee Department Number:");
+            e1.deptno = Convert.ToInt32(Console.ReadLine());
+
+            e1.AcceptData(e1.empno, e1.ename, sal, e1.deptno);
+            Console.WriteLine("Employee Details:");
+            e1.Display();
+
+            Console.ReadLine();
+        }
+
+        struct Employees
+        {
+            int Empno, Sal, Deptno;
+            string Ename;
+            public void AcceptData(int empno, string ename, int sal, int deptno)
+            {
+                Empno = empno;
+                Ename = ename;
+                Sal = sal;
+                Deptno = deptno;
+            }
+            public int empno
+            {
+                set
+                {
+                    if (Empno == 0)
+                    {
+                        Console.WriteLine("Employee number cannot be null");
+                    }
+
+                }
+                get
+                {
+                    return Empno;
+                }
+            }
+            public int deptno
+            {
+                set
+                {
+                    if (Deptno == 0)
+                    {
+                        Console.WriteLine("Department number cannot be null");
+                    }
+                    else
+                    {
+                        Deptno = value;
+                    }
+                }
+                get
+                {
+                    return Deptno;
+                }
+            }
+            public string ename
+            {
+                set
+                {
+                    if (string.IsNullOrEmpty(Ename))
+                    {
+                        Console.WriteLine("Employee Name cannot be valid.");
+                    }
+                    else
+                    {
+                        Ename = value;
+
+                    }
+                }
+                get
+                {
+                    return Ename;
+                }
+
+            }
+            public void Display()
+            {
+                Console.WriteLine("Employee Number: " + Empno);
+                Console.WriteLine("Employee Name: " + Ename);
+                Console.WriteLine("Employee Salary: " + Sal);
+                Console.WriteLine("Department Number: " + Deptno);
+            }
+        }
+    }
+}
+
+_________________________________________________________________________________________________________________________________________
