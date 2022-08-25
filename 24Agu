@@ -1,0 +1,201 @@
+Program1:
+-------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ReusablecodeLibrary
+{
+    public class Program1
+    {
+        public static void Compare()
+        {
+            Console.Write("Enter a string: ");
+            string s1 = Console.ReadLine();
+            Console.Write("Enter another string: ");
+            string s2 = Console.ReadLine();
+
+            if (s1 == s2)
+                Console.WriteLine("\"{0}\" and \"{1}\" are equal", s1, s2);
+
+            else
+                Console.WriteLine("\"{0}\" and \"{1}\" are not equal", s1, s2);
+        }
+    }    
+}
+
+________________________________________________________________________________________________________
+
+Program2:
+--------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ReusablecodeLibrary
+{
+    class program2
+    {
+        public static void Copy()
+        {
+            
+            Console.WriteLine("Enter a string: ");
+            string s1 = Console.ReadLine();
+            var s = string.Copy(s1);
+            Console.WriteLine("Copy of String: \n" + s);
+            Console.ReadLine();
+        }
+    }
+}
+
+_____________________________________________________________________________________________________________
+
+Program3:
+_______
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ReusablecodeLibrary
+{
+    class Program4
+    {
+        public static void Split()
+        {
+            string newStr = "Welcome to the world of C# Programming";
+            string[] sep = { "#" };
+            int cnt = 2;
+            string[] result = newStr.Split(sep, cnt, StringSplitOptions.RemoveEmptyEntries);
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+}
+
+
+_____________________________________________________________________________________________________________________________
+
+Program4
+_____
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ReusablecodeLibrary
+{
+    class Program3
+    {
+        public static void Indexof()
+        {
+            //Program 3
+            Console.WriteLine("Enter a string: ");
+            string s = Console.ReadLine();
+            Console.WriteLine("Enter character to show index: ");
+            char ch = Convert.ToChar(Console.ReadLine());
+            int indexofch = s.IndexOf(ch);
+            Console.WriteLine("Index of given character is: " + indexofch);
+
+        }
+    }
+
+}
+
+_______________________________________________________________________________________________________________
+
+Program 5
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ReusablecodeLibrary
+{
+    class Program5
+    {
+        public static void Uppercase()
+        {
+           
+            Console.WriteLine("Enter a String: ");
+            string s = Console.ReadLine();
+            string s1 = s.ToUpper();
+            Console.WriteLine("Converted String: " + s1);
+        }
+    }
+}
+    
+    _______________________________________________________________________________________________________________________
+    
+    Program 6:
+    
+    using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ReusablecodeLibrary
+{
+    class Program6
+    {
+        
+        
+            public static void Makefile()
+            {
+               
+                string path = @"C:\Users\new\Documents\Demo\demo.txt";
+                File.Create(path);
+            }
+        }
+    }
+
+_________________________________________________________________________________________________________________________________________
+
+Program7
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ReusablecodeLibrary
+{
+    class program7
+    {
+        public static void Datedetails()
+        {
+            
+            DateTime dt = new DateTime();
+            dt = DateTime.Now;
+            Console.WriteLine(dt);
+            Console.WriteLine("\n");
+            Console.WriteLine("Year= " + dt.Year);
+            Console.WriteLine("Month= " + dt.Month);
+            Console.WriteLine("Day= " + dt.Day);
+            Console.WriteLine("Hour= " + dt.Hour);
+            Console.WriteLine("Minute= " + dt.Minute);
+            Console.WriteLine("Seconds= " + dt.Second);
+            Console.WriteLine("Milliseconds= " + dt.Millisecond);
+
+        }
+    }
+}
+    
+
