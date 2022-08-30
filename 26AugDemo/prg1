@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Struct_Lib
+{
+    class prg1
+    {
+        static void Main(string[] args)
+        {
+
+            Class1.Students[] stu = { new Class1.Students(), new Class1.Students(), new Class1.Students(), new Class1.Students() };
+            stu[0].SetStudents(1, "rolex");
+            stu[1].SetStudents(2, "Raju");
+            stu[2].SetStudents(3, "Dilli");
+
+            stu[0].DisplayStudents();
+            stu[1].DisplayStudents();
+            stu[2].DisplayStudents();
+
+        }
+    }
+}
