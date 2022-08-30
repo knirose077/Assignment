@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Struct_Lib
+{
+    class prg2    
+    {
+        public struct Employee
+        {
+            public int Id;
+            public string Name;
+            public int Age;
+
+            public void SetEmployee(int id, string name, int age)
+            {
+                Id = id;
+                Name = name;
+                Age = age;
+            }
+
+            public void DisplayEmployee()
+            {
+                Console.WriteLine("Employee:");
+                Console.WriteLine("\tId    : " + Id);
+                Console.WriteLine("\tName   : " + Name);
+                Console.WriteLine("\tAge   : " + Age);
+                Console.WriteLine("\n");
+            }
+
+        }
+    }
+}
