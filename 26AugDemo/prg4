@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Struct_Lib
+{
+    class prg4
+    {
+        public static void Main(string[] args)
+        {
+            LinkedList<string> mylist = new LinkedList<string>();
+            mylist.AddFirst("smith");
+            mylist.AddLast("veera");
+            mylist.AddAfter(mylist.First, "doll");
+            mylist.AddBefore(mylist.Last, "samy");
+            mylist.AddBefore(mylist.Last.Previous, "pari");
+            mylist.AddAfter(mylist.First.Next, "hari");
+            LinkedListNode<string> foundnode = mylist.Find("lacy");
+            foundnode.Value = "don";
+
+            foreach (var item in mylist)
+            {
+                Console.WriteLine(item);
+
+            }
+            Console.ReadKey();
+        }
+
+    }
+}
+
