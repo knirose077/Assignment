@@ -1,0 +1,99 @@
+
+    prg1
+    
+    
+    using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _29Aug
+{
+    class prg1
+    {
+        internal class Userstack<T>
+        {
+            internal static int max = 1000;
+            T[] stack = new T[max];
+            int top = -1;
+            public void Push(T str)
+            {
+                if (top >= 1000)
+                {
+                    Console.WriteLine("can't push");
+                }
+                else
+                {
+                    stack[++top] = str;
+                }
+            }
+            public void Pop()
+            {
+                if (top < 0)
+                {
+                    Console.WriteLine("No elements there to pop");
+                }
+                else
+                {
+                    T value = stack[top--];
+                    Console.WriteLine(value);
+                }
+            }
+            public T Peek()
+            {
+                if (top < 0)
+                {
+                    return default(T);
+                }
+                else
+                {
+                    T value = stack[top];
+                    return value;
+                }
+            }
+            public void printData()
+            {
+                for (int i = top; i >= 0; i--)
+                {
+                    Console.WriteLine(stack[i]);
+                }
+            }
+        }
+    }
+}
+
+
+    ========================================================================================================================
+    
+    prog.cs
+    
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Globalization;
+
+namespace _29Aug
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+           prg1. Userstack<string> u = new prg1.Userstack<string>();
+            u.Push("rolex");
+            u.Push("gangstar");
+            u.Push("marsel");
+            Console.WriteLine("Popped element");
+            u.Pop();
+            Console.WriteLine("Elements at present");
+            u.printData();
+            Console.WriteLine("Top element at present");
+            string k = u.Peek();
+            Console.WriteLine(k);
+            Console.ReadLine();
+
+        }
+    }
+    
