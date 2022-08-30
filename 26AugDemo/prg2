@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Struct_Lib
+{
+    class prg2
+    {
+        using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using HandsonAug26;
+using static HandsonAug26.Class1;
+
+namespace HandsonAug26
+    {
+        internal class Program
+        {
+            static void Main(string[] args)
+            {
+                
+                Class1.Employee[] emp = { new Employee(),
+                       new Employee(),
+                       new Employee() };
+
+                
+                emp[0].SetEmployee(1, "logesh", 30);
+                emp[1].SetEmployee(2, "karthi", 26);
+                emp[2].SetEmployee(3, "raju", 23);
+
+               
+                emp[0].DisplayEmployee();
+                emp[1].DisplayEmployee();
+                emp[2].DisplayEmployee();
+                Console.ReadKey();
+            }
+        }
+    }
+}
+
