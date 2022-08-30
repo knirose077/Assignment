@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Struct_Lib
+{
+    public class Class1
+    {
+        public struct Students
+        {
+            public int Id;
+            public string Name;
+
+
+            public void SetStudents(int id, string name)
+            {
+                this.Id = id;
+                this.Name = name;
+            }
+
+            public void DisplayStudents()
+            {
+                Console.WriteLine("Students:");
+                Console.WriteLine("\tId :" + Id);
+                Console.WriteLine("\tname :" + Name);
+                Console.WriteLine("\n");
+            }
+        }
+    }
+}
