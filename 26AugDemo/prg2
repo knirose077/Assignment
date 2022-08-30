@@ -8,18 +8,6 @@ namespace Struct_Lib
 {
     class prg2
     {
-        using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HandsonAug26;
-using static HandsonAug26.Class1;
-
-namespace HandsonAug26
-    {
-        internal class Program
-        {
             static void Main(string[] args)
             {
                 
@@ -40,5 +28,5 @@ namespace HandsonAug26
             }
         }
     }
-}
+
 
