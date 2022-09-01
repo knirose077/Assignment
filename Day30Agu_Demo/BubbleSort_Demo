@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Day30Agu_Demo
+{
+    class BubbleSort_Demo
+    {
+        static void Main(string[] args)
+        {
+            int[] arr = new int[] { 4, 66, 32, 12, 87, 90, 67, 35, 1, 7, 99 };
+            bubbleSort(arr);
+            Console.Read();
+        }
+        static void bubbleSort(int[] arr)
+        {
+            int temp;
+            for (int i = 0; i < (arr.Length) - 1; i++)
+            {
+                for (int j = 0; j < (arr.Length - 1) - i; j++)
+                {
+                    if (arr[j] > arr[j + 1])
+                    {
+                        temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            Console.WriteLine("Bubble Sort");
+            Console.WriteLine("____________");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.WriteLine(arr[i]);
+            }
+        }
+    }
+}
