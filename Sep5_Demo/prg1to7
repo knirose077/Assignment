@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sep5_Demo
+{
+     public class Program
+    {
+        static void Main(string[] args)
+        {
+           
+            Book b = new Book();
+            Console.WriteLine("Book  id : {0}, Book Name : {1}, Book Description : {2}", b.BookID, b.BookName, b.Price);
+
+            Book b2 = new Book(2, "Planet", 100);
+            Console.WriteLine("Book  id : {0}, Book Name : {1}, Book Description : {2}", b2.BookID, b2.BookName, b2.Price);
+
+
+
+            Console.ReadKey();
+        }
+    }
+}
