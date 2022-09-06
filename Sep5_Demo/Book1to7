@@ -1,0 +1,80 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Sep5_Program
+{
+    public class Book
+    {
+       
+
+            public Book(int Bookid)
+            {
+                _bookid = Bookid;
+            }
+
+            private int _bookid;
+
+            public int BookID
+            {
+                get { return _bookid; }
+                set { _bookid = value; }
+            }
+            private string _bname;
+
+            public string BookName
+            {
+                get { return _bname; }
+                set { _bname = value; }
+            }
+
+            private int _price;
+
+            public int Price
+            {
+                get { return _price; }
+                set { _price = value; }
+            }
+
+            private string _author;
+
+            public string Author
+            {
+                get { return _author; }
+                set { _author = value; }
+            }
+            public Book()
+            {
+                BookName = "Fetch-22";
+            }
+            public Book(int bookid, string bname, int price)
+            {
+                this.BookID = bookid;
+                this.BookName = bname;
+                this.Price = price;
+            }
+            public void InsertBook(int bookid, string bname, int price)
+            {
+                this.BookID = bookid;
+                this.BookName = bname;
+                this.Price = price;
+
+            }
+
+            public void InsertBook(int bookid, string bname, int price, string author)
+            {
+                this.BookID = bookid;
+                this.BookName = bname;
+                this.Price = price;
+                this.Author = author;
+           }
+            public void InsertBook(int bookid, string bname)
+            {
+                this.BookID = bookid;
+                this.BookName = bname;
+
+            }
+        }
+    }
