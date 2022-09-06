@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace classLib_1
+{
+    public class Cart:Book
+    {
+		private int cid;
+
+		public int CustromerId
+		{
+			get { return cid; }
+			set { cid = value; }
+		}
+		private int bookingid;
+
+		public int BookingId
+		{
+			get { return bookingid; }
+			set { bookingid = value; }
+		}
+		private List<Cart> booklist;
+
+		public List<Cart> BookLists
+		{
+			get { return booklist; }
+			set { booklist = value; }
+		}
+
+		public void Addbook(int cid,int bookingid,string bkname,int bkprice)
+		{
+			this.CustromerId = cid;
+			this.BookingId = bookingid;
+			this.BookName = bkname;
+			this.Bookprice = bkprice;
+
+        }
+		static int bookcount=0;
+		public void AddCount()
+		{
+			bookcount += 1;
+			Console.WriteLine("count Added {0}--------------",bookcount);
+		
+		}
+
+		public void Displayinfo()
+		{
+			Console.WriteLine("books in carts........................");
+			Console.WriteLine("details");
+			foreach(var c in BookLists)
+			{
+				Console.WriteLine("custromerid=" + this.CustromerId);
+				Console.WriteLine("bookingid="+ this.BookingId);
+				Console.WriteLine("bookname=" + this.BookName);
+				Console.WriteLine("price="+this.Bookprice);
+				AddCount();
+				Console.ReadLine();
+			}
+		}
+	}
+}
