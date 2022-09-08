@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ClassLibrary;
+
+
+namespace Sep7_Demo
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Lengthstring s1 = new Lengthstring();
+            MyDelegate del = new MyDelegate(s1.TestString);
+            del.Invoke();
+
+            Console.WriteLine("________________");
+            Greet g1 = new Greet(s1.User);
+            g1("moro");
+
+           Console.WriteLine("__________________");
+            Calculations cal1 = new Calculations(s1.sum);
+            Calculations cal2 = new Calculations(s1.subtract);
+            Calculations cal =(Calculations) MulticastDelegate.Combine(cal1, cal2);
+
+            cal( 10,6);
+            Console.ReadKey();
+  
+        }
+    }
+}
