@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ClassLib
+{
+
+
+    public delegate void MyDelegate();
+
+    public delegate string Greet(string s);
+
+    public delegate void Calculations(int a, int b);
+
+    public class Lengthstring
+    {
+        public void TestString()
+        {
+            string name = "Anthony";
+            int nameLength = name.Length;
+            Console.WriteLine("The name " + name + " contains " + nameLength + "letters.");
+        }
+
+        public string User(string name)
+        {
+
+            Console.WriteLine("hello" + name);
+            return name;
+
+        }
+
+        public void sum(int a, int b)
+        {
+            Console.WriteLine("Addition of 2 nos. = {0}", a + b);
+        }
+        public void subtract(int a, int b)
+        {
+            Console.WriteLine("Subtraction of 2 nos. = {0}", a - b);
+
+
+
+        }
+    }
+}
