@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Reflection;
+
+
+namespace Sep12_Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string path = @"C:\Users\NIROSE K\source\repos\Section_A\bin\Debug\Section_A.dll";
+            Assembly asm = Assembly.LoadFrom(path);
+
+            Type[] types = asm.GetTypes();
+            Type t = null;
+
+            foreach (var item in types)
+            {
+                                            
+                t = asm.GetType(item.FullName);
+
+                object obj = Activator.CreateInstance(t);
+
+
+                item.InvokeMember("SqrRt", BindingFlags.Public | BindingFlags.Instance | BindingFlags.InvokeMethod, null, obj, new object[] { 23 });
+
+                item.InvokeMember("Cube", BindingFlags.Public | BindingFlags.Instance | BindingFlags.InvokeMethod, null, obj, new object[] { 4 });
+
+                break;
+            }
+            Console.ReadLine();
+
+        }
+    }
+}
